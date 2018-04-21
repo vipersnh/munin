@@ -31,8 +31,9 @@ override_dh_auto_install:
 		DESTDIR=$(CURDIR)/debian/munin
 
 	$(MAKE) install-node-prime $(MAKEOPTS) \
-		MANDIR=$(CURDIR)/debian/munin-doc/usr/share/man \
 		DESTDIR=$(CURDIR)/debian/munin-node
+	# perl module documentation goes into the doc package
+	mv $(CURDIR)/debian/munin-node/usr/share/man/man3/* $(CURDIR)/debian/munin-doc/usr/share/man/man3/
 
 	# workaround bug in upstream Makefile
 	mkdir -p $(CURDIR)/debian/munin-async/var/lib
