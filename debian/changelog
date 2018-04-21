@@ -5,6 +5,7 @@ munin (2.0.37-2) UNRELEASED; urgency=medium
     "munin-doc" to their respective packages
     - perl module documentation stays in "munin-doc"
     - Closes: #896440
+  * add man pages to "munin-async" package
 
  -- Holger Levsen <holger@debian.org>  Thu, 05 Apr 2018 17:47:11 +0000
 

@@ -1,0 +1,20 @@
+--- munin.orig/Makefile
++++ munin/Makefile
+@@ -27,6 +27,7 @@ INFILES_MASTER   := $(shell find master
+ CLASSFILES       := $(shell find plugins/javalib -name '*.java' | sed 's/\(.*\)\.java$$/build\/\1.class/')
+ PLUGINS		 := $(wildcard plugins/node.d.$(OSTYPE)/* plugins/node.d/* $(JAVA_PLUGINS))
+ MANCENTER        := "Munin Documentation"
++MAN1		 := node/_bin/munin-async node/_bin/munin-asyncd
+ MAN8		 := master/_bin/munin-update master/_bin/munin-limits master/_bin/munin-html master/_bin/munin-graph
+ PODMAN8          := build/master/doc/munin-cron master/doc/munin master/doc/munin-check
+ PODMAN5          := build/master/doc/munin.conf node/doc/munin-node.conf
+@@ -339,6 +340,9 @@ build-man: build-man-stamp Makefile Make
+ build-man-stamp:
+ 	touch build-man-stamp
+ 	mkdir -p build/doc
++	for f in $(MAN1); do \
++	   pod2man --section=1 --release=$(RELEASE) --center=$(MANCENTER) build/"$$f" > build/doc/`basename $$f`.1; \
++	done
+ 	for f in $(MAN8); do \
+ 	   pod2man --section=8 --release=$(RELEASE) --center=$(MANCENTER) build/"$$f" > build/doc/`basename $$f`.8; \
+ 	done
