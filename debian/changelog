@@ -2,8 +2,8 @@ munin (2.999.7-2) UNRELEASED; urgency=medium
 
   * munin-node: include manpages for "munin-doc" and "munin-sched"
   * munin: include manpage for "munin-httpd"
-  * replace embedded copy of "fonts-materialdesignicons-webfont" with
-    dependency and symlinks
+  * replace embedded copies of "fonts-materialdesignicons-webfont" and
+    "libjs-jquery" with dependencies and symlinks
 
  -- Lars Kruse <devel@sumpfralle.de>  Mon, 30 Apr 2018 02:29:38 +0200
 
