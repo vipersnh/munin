@@ -1,6 +1,7 @@
 munin (2.999.7-2) UNRELEASED; urgency=medium
 
   * munin-node: include manpages for "munin-doc" and "munin-sched"
+  * munin: include manpage for "munin-httpd"
 
  -- Lars Kruse <devel@sumpfralle.de>  Mon, 30 Apr 2018 02:29:38 +0200
 
