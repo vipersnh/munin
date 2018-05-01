@@ -6,6 +6,7 @@ munin (2.999.7-2) UNRELEASED; urgency=medium
     "libjs-jquery" with dependencies and symlinks
   * munin-plugins-extra: replace Suggest for "python" with "python3"
     (since all relevant plugins switched from python2 to python3)
+  * libmunin-perl: add missing dependency "libparams-validate-perl"
 
  -- Lars Kruse <devel@sumpfralle.de>  Mon, 30 Apr 2018 02:29:38 +0200
 
